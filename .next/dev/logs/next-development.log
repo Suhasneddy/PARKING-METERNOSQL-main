@@ -1,0 +1,38 @@
+[00:00:01.439] Server  LOG      ✓ Ready in 963ms
+[00:00:01.443] Server  WARN     ⚠ Cross origin request detected from 192.168.0.4 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:04.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.111] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:05.111] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/register","route":"/register"}
+[00:00:05.112] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.0.4:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://192.168.0.4:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093328041}
+[00:00:41.841] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:42.416] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:42.416] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:42.417] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093366064}
+[00:00:47.558] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://localhost:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093371215}
+[00:00:52.995] Browser LOG     Requesting camera access...
+[00:00:52.995] Browser LOG     Requesting camera access...
+[00:01:00.263] Browser ERROR   Camera access denied: {}
+[00:01:20.107] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:20.268] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:20.268] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/register","route":"/register"}
+[00:01:20.268] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://localhost:3000/register","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093403927}
+[00:01:29.780] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:30.525] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:30.525] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/register","route":"/register"}
+[00:01:30.525] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.0.4:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://192.168.0.4:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093413148}
+[00:01:58.612] Browser LOG     Requesting camera access...
+[00:01:58.612] Browser LOG     Requesting camera access...
+[00:02:51.699] Server  LOG     ✅ Connected to MongoDB: "parking_meter"
+[00:02:51.702] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
+[00:02:51.742] Server  LOG     [v0] Invalid USN format: "engct0043"
+[00:02:59.376] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
+[00:02:59.404] Server  LOG     [v0] Invalid USN format: "engct0043"
+[00:03:00.102] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
+[00:03:00.144] Server  LOG     [v0] Invalid USN format: "engct0043"
+[00:03:10.076] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
+[00:03:10.104] Server  LOG     [v0] Invalid USN format: "engct0043"
+[00:03:10.660] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
+[00:03:10.688] Server  LOG     [v0] Invalid USN format: "engct0043"
+[00:03:40.765] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
+[00:03:40.806] Server  LOG     [v0] Invalid USN format: "engct0043"
