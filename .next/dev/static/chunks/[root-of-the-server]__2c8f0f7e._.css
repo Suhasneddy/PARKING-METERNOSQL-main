@@ -186,7 +186,6 @@
     --color-yellow-400: #fac800;
     --color-green-50: #f0fdf4;
     --color-green-200: #b9f8cf;
-    --color-green-800: #016630;
     --color-green-900: #0d542b;
     --color-black: #000;
     --color-white: #fff;
@@ -251,7 +250,6 @@
       --color-yellow-400: lab(83.2664% 8.65132 106.895);
       --color-green-50: lab(98.1563% -5.60117 2.75913);
       --color-green-200: lab(92.4222% -26.4702 12.9427);
-      --color-green-800: lab(37.4616% -36.7971 22.9692);
       --color-green-900: lab(30.797% -29.6927 17.382);
     }
   }
@@ -2314,10 +2312,6 @@
     .text-foreground\/50 {
       color: color-mix(in oklab, var(--foreground) 50%, transparent);
     }
-  }
-
-  .text-green-800 {
-    color: var(--color-green-800);
   }
 
   .text-green-900 {

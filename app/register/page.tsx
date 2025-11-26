@@ -2,22 +2,24 @@
 
 import type React from "react"
 
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { CameraCapture } from "@/components/camera-capture"
 
 export default function RegisterPage() {
+  const router = useRouter()
   const [step, setStep] = useState<"details" | "camera" | "preview">("details")
   const [formData, setFormData] = useState({
-    studentName: "",
-    usn: "",
-    hostelRoom: "",
-    vehicleNumber: "",
+    studentName: "John Doe",
+    usn: "1BM19CS001",
+    hostelRoom: "A-201",
+    vehicleNumber: "KA01AB1234",
   })
   const [capturedImage, setCapturedImage] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [successMessage, setSuccessMessage] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
@@ -29,10 +31,12 @@ export default function RegisterPage() {
     setStep("preview")
   }
 
-  const handleSubmit = async () => {
-    setIsLoading(true)
+  async function handleConfirm() {
     try {
-      const response = await fetch("/api/register", {
+      setLoading(true)
+      setError(null)
+
+      const res = await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -41,17 +45,19 @@ export default function RegisterPage() {
         }),
       })
 
-      if (response.ok) {
-        setSuccessMessage("Vehicle registered successfully!")
-        setFormData({ studentName: "", usn: "", hostelRoom: "", vehicleNumber: "" })
-        setCapturedImage(null)
-        setStep("details")
-        setTimeout(() => setSuccessMessage(""), 3000)
+      const data = await res.json()
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Failed to register")
       }
-    } catch (error) {
-      console.error("Registration error:", error)
+
+      // On success go to dashboard or success page
+      router.push("/dashboard")
+    } catch (err: any) {
+      console.error("Confirm registration failed:", err)
+      setError(err?.message || "Something went wrong")
     } finally {
-      setIsLoading(false)
+      setLoading(false)
     }
   }
 
@@ -77,11 +83,6 @@ export default function RegisterPage() {
           <div className={`flex-1 h-2 rounded-full ${step === "preview" ? "bg-primary" : "bg-muted"}`}></div>
         </div>
 
-        {successMessage && (
-          <Card className="mb-8 p-4 bg-green-50 border-green-200">
-            <p className="text-green-800">{successMessage}</p>
-          </Card>
-        )}
 
         {/* Step 1: Student Details */}
         {step === "details" && (
@@ -148,7 +149,7 @@ export default function RegisterPage() {
         {step === "camera" && (
           <Card className="p-8 space-y-6">
             <h2 className="text-2xl font-semibold">Capture License Plate</h2>
-            <CameraCapture onCapture={handleCapture} isLoading={isLoading} />
+            <CameraCapture onCapture={handleCapture} isLoading={loading} />
             <Button onClick={() => setStep("details")} variant="outline" className="w-full" size="lg">
               Back
             </Button>
@@ -195,14 +196,15 @@ export default function RegisterPage() {
                 Recapture
               </Button>
               <Button
-                onClick={handleSubmit}
-                disabled={isLoading}
+                onClick={handleConfirm}
+                disabled={loading}
                 className="flex-1 bg-primary hover:bg-primary/90"
                 size="lg"
               >
-                {isLoading ? "Registering..." : "Confirm Registration"}
+                {loading ? "Registering..." : "Confirm Registration"}
               </Button>
             </div>
+            {error && <p className="text-red-500 text-sm mt-4">{error}</p>}
           </Card>
         )}
       </div>
