@@ -1,38 +1,23 @@
-[00:00:01.439] Server  LOG      ✓ Ready in 963ms
-[00:00:01.443] Server  WARN     ⚠ Cross origin request detected from 192.168.0.4 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:04.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:05.111] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:05.111] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/register","route":"/register"}
-[00:00:05.112] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.0.4:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://192.168.0.4:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093328041}
-[00:00:41.841] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:42.416] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:42.416] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:42.417] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093366064}
-[00:00:47.558] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://localhost:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093371215}
-[00:00:52.995] Browser LOG     Requesting camera access...
-[00:00:52.995] Browser LOG     Requesting camera access...
-[00:01:00.263] Browser ERROR   Camera access denied: {}
-[00:01:20.107] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:20.268] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:20.268] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/register","route":"/register"}
-[00:01:20.268] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://localhost:3000/register","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093403927}
-[00:01:29.780] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:30.525] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:30.525] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/register","route":"/register"}
-[00:01:30.525] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.0.4:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://192.168.0.4:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764093413148}
-[00:01:58.612] Browser LOG     Requesting camera access...
-[00:01:58.612] Browser LOG     Requesting camera access...
-[00:02:51.699] Server  LOG     ✅ Connected to MongoDB: "parking_meter"
-[00:02:51.702] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
-[00:02:51.742] Server  LOG     [v0] Invalid USN format: "engct0043"
-[00:02:59.376] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
-[00:02:59.404] Server  LOG     [v0] Invalid USN format: "engct0043"
-[00:03:00.102] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
-[00:03:00.144] Server  LOG     [v0] Invalid USN format: "engct0043"
-[00:03:10.076] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
-[00:03:10.104] Server  LOG     [v0] Invalid USN format: "engct0043"
-[00:03:10.660] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
-[00:03:10.688] Server  LOG     [v0] Invalid USN format: "engct0043"
-[00:03:40.765] Server  LOG     [v0] Registration request received for vehicle: "KA04JK4722"
-[00:03:40.806] Server  LOG     [v0] Invalid USN format: "engct0043"
+[00:00:02.553] Server  LOG      ✓ Ready in 1694ms
+[00:00:09.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.077] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:13.077] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:13.077] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764128596619}
+[00:00:16.204] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/register color: rgb(120, 120, 120) color: inherit {"dp":"/register","o":"http://localhost:3000/register","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764128599731}
+[00:00:24.405] Browser LOG     Requesting camera access...
+[00:00:24.406] Browser LOG     Requesting camera access...
+[00:00:49.524] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764128633063}
+[00:01:04.789] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\mongodb\lib\sdam\topology.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.794] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\mongodb\lib\mongo_client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.797] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\.next\dev\server\chunks\[root-of-the-server]__003fa454._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.829] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\compiled\next-server\app-route-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.848] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\.next\dev\server\chunks\d8efc_next_0ebb6f6d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.871] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.876] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.880] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.881] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.893] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.895] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.902] Server  ERROR   C:\Users\Acer\OneDrive\Documents\NO SQL\PARKING-METERNOSQL-main\node_modules\mongodb\lib\cmap\connect.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[00:01:04.917] Server  ERROR   [v0] Registration error: MongoServerSelectionError: 48640000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1605:SSL alert number 80
+
