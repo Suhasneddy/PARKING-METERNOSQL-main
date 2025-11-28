@@ -50,7 +50,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs)");
 ;
-const uri = ("TURBOPACK compile-time value", "mongodb+srv://snr200564_db_user:Suhas200564@cluster1.ktlwku6.mongodb.net/parking_meter?retryWrites=true&w=majority");
+const uri = ("TURBOPACK compile-time value", "mongodb+srv://snr200564_db_user:Suhas200564@cluster0.kx4p8mt.mongodb.net/");
 const dbName = process.env.MONGODB_DB_NAME || "parking_meter";
 let client = null;
 let db = null;
