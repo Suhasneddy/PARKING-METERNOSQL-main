@@ -227,26 +227,28 @@ function CameraCapture({ onCapture, isLoading = false }) {
     const [isCameraActive, setIsCameraActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "CameraCapture.useEffect": ()=>{
-            const requestCameraAccess = {
-                "CameraCapture.useEffect.requestCameraAccess": async ()=>{
-                    try {
-                        console.log("Requesting camera access...");
-                        const stream = await navigator.mediaDevices.getUserMedia({
-                            video: {
-                                facingMode: "environment"
+            if ("TURBOPACK compile-time truthy", 1) {
+                const requestCameraAccess = {
+                    "CameraCapture.useEffect.requestCameraAccess": async ()=>{
+                        try {
+                            console.log("Requesting camera access...");
+                            const stream = await navigator.mediaDevices.getUserMedia({
+                                video: {
+                                    facingMode: "environment"
+                                }
+                            });
+                            if (videoRef.current) {
+                                videoRef.current.srcObject = stream;
+                                setHasPermission(true);
                             }
-                        });
-                        if (videoRef.current) {
-                            videoRef.current.srcObject = stream;
-                            setHasPermission(true);
+                        } catch (err) {
+                            console.error("Camera access denied:", err);
+                            setHasPermission(false);
                         }
-                    } catch (err) {
-                        console.error("Camera access denied:", err);
-                        setHasPermission(false);
                     }
-                }
-            }["CameraCapture.useEffect.requestCameraAccess"];
-            requestCameraAccess();
+                }["CameraCapture.useEffect.requestCameraAccess"];
+                requestCameraAccess();
+            }
             return ({
                 "CameraCapture.useEffect": ()=>{
                     if (videoRef.current?.srcObject) {
@@ -279,12 +281,12 @@ function CameraCapture({ onCapture, isLoading = false }) {
                 children: "Camera permission denied. Please enable camera access in your browser settings."
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                lineNumber: 61,
+                lineNumber: 63,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-            lineNumber: 60,
+            lineNumber: 62,
             columnNumber: 7
         }, this);
     }
@@ -294,7 +296,7 @@ function CameraCapture({ onCapture, isLoading = false }) {
             children: "Requesting camera access..."
         }, void 0, false, {
             fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-            lineNumber: 69,
+            lineNumber: 71,
             columnNumber: 12
         }, this);
     }
@@ -311,7 +313,7 @@ function CameraCapture({ onCapture, isLoading = false }) {
                         className: "w-full aspect-video object-cover"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                        lineNumber: 75,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
@@ -319,7 +321,7 @@ function CameraCapture({ onCapture, isLoading = false }) {
                         className: "hidden"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                        lineNumber: 76,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -330,23 +332,23 @@ function CameraCapture({ onCapture, isLoading = false }) {
                                 className: "w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                                lineNumber: 79,
+                                lineNumber: 81,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                            lineNumber: 78,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                        lineNumber: 77,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                lineNumber: 74,
+                lineNumber: 76,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -357,13 +359,13 @@ function CameraCapture({ onCapture, isLoading = false }) {
                 children: isLoading ? "Processing..." : "Capture License Plate"
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-                lineNumber: 83,
+                lineNumber: 85,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
-        lineNumber: 73,
+        lineNumber: 75,
         columnNumber: 5
     }, this);
 }
