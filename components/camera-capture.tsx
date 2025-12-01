@@ -16,23 +16,25 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
   const [isCameraActive, setIsCameraActive] = useState(false)
 
   useEffect(() => {
-    const requestCameraAccess = async () => {
-      try {
-        console.log("Requesting camera access...");
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: "environment" },
-        })
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream
-          setHasPermission(true)
+    if (typeof window !== "undefined") {
+      const requestCameraAccess = async () => {
+        try {
+          console.log("Requesting camera access...");
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: "environment" },
+          });
+          if (videoRef.current) {
+            videoRef.current.srcObject = stream;
+            setHasPermission(true);
+          }
+        } catch (err) {
+          console.error("Camera access denied:", err);
+          setHasPermission(false);
         }
-      } catch (err) {
-        console.error("Camera access denied:", err)
-        setHasPermission(false)
-      }
-    }
+      };
 
-    requestCameraAccess()
+      requestCameraAccess();
+    }
 
     return () => {
       if (videoRef.current?.srcObject) {
