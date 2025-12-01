@@ -14,27 +14,36 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [hasPermission, setHasPermission] = useState<boolean>(true)
   const [isCameraActive, setIsCameraActive] = useState(false)
+  const [isUnsupported, setIsUnsupported] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const requestCameraAccess = async () => {
-        try {
-          console.log("Requesting camera access...");
-          const stream = await navigator.mediaDevices.getUserMedia({
-            video: { facingMode: "environment" },
-          });
-          if (videoRef.current) {
-            videoRef.current.srcObject = stream;
-            setHasPermission(true);
-          }
-        } catch (err) {
-          console.error("Camera access denied:", err);
-          setHasPermission(false);
-        }
-      };
+    const requestCameraAccess = async () => {
+      if (
+        typeof navigator.mediaDevices === "undefined" ||
+        typeof navigator.mediaDevices.getUserMedia === "undefined"
+      ) {
+        console.error("Camera API is not supported in this browser.");
+        setIsUnsupported(true);
+        setHasPermission(false);
+        return;
+      }
 
-      requestCameraAccess();
-    }
+      try {
+        console.log("Requesting camera access...");
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "environment" },
+        });
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+          setHasPermission(true);
+        }
+      } catch (err) {
+        console.error("Camera access denied:", err);
+        setHasPermission(false);
+      }
+    };
+
+    requestCameraAccess();
 
     return () => {
       if (videoRef.current?.srcObject) {
@@ -55,6 +64,16 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
         onCapture(imageData)
       }
     }
+  }
+
+  if (isUnsupported) {
+    return (
+      <Card className="p-8 text-center">
+        <p className="text-red-500 mb-4">
+          Camera is not supported on this browser. Please use a different browser.
+        </p>
+      </Card>
+    );
   }
 
   if (hasPermission === false) {
