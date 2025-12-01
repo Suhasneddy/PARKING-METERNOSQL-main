@@ -57,9 +57,30 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
     if (canvasRef.current && videoRef.current) {
       const context = canvasRef.current.getContext("2d")
       if (context) {
-        canvasRef.current.width = videoRef.current.videoWidth
-        canvasRef.current.height = videoRef.current.videoHeight
-        context.drawImage(videoRef.current, 0, 0)
+        // Define the dimensions of the highlighted rectangle
+        const rectWidth = 256; // w-64
+        const rectHeight = 96; // h-24
+
+        // Calculate the position of the rectangle to be in the center
+        const sx = (videoRef.current.videoWidth - rectWidth) / 2
+        const sy = (videoRef.current.videoHeight - rectHeight) / 2
+
+        // Set canvas dimensions to the size of the rectangle
+        canvasRef.current.width = rectWidth
+        canvasRef.current.height = rectHeight
+
+        // Draw the cropped image from the video onto the canvas
+        context.drawImage(
+          videoRef.current,
+          sx,
+          sy,
+          rectWidth,
+          rectHeight,
+          0,
+          0,
+          rectWidth,
+          rectHeight
+        )
         const imageData = canvasRef.current.toDataURL("image/jpeg")
         onCapture(imageData)
       }

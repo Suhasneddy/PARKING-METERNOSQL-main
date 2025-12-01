@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { extractPlateNumberFromImage, extractValidPlate } from "@/lib/ocr-service"
+import { connectToDatabase } from "@/lib/mongodb"
 
 interface StudentVehicle {
   _id?: string
@@ -11,45 +12,23 @@ interface StudentVehicle {
   registrationDate: Date
 }
 
-// Mock database (will be replaced with MongoDB)
-const vehicleDatabase: StudentVehicle[] = [
-  {
-    _id: "1",
-    studentName: "John Doe",
-    usn: "1BM19CS001",
-    hostelRoom: "A-201",
-    vehicleNumber: "KA01AB1234",
-    licensePlateImage: "",
-    registrationDate: new Date("2025-01-15"),
-  },
-  {
-    _id: "2",
-    studentName: "Jane Smith",
-    usn: "1BM19CS002",
-    hostelRoom: "B-305",
-    vehicleNumber: "KA01CD5678",
-    licensePlateImage: "",
-    registrationDate: new Date("2025-01-10"),
-  },
-]
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
     const { licensePlateImage } = body
 
     if (!licensePlateImage) {
-      console.log("[v0] No image provided for scanning")
+      console.log("[v1] No image provided for scanning")
       return NextResponse.json({ error: "No image provided" }, { status: 400 })
     }
 
-    console.log("[v0] Processing license plate scan...")
+    console.log("[v1] Processing license plate scan...")
 
     // Extract plate number using OCR
     const ocrResult = await extractPlateNumberFromImage(licensePlateImage)
 
     if (!ocrResult.success) {
-      console.log("[v0] OCR processing failed:", ocrResult.error)
+      console.log("[v1] OCR processing failed:", ocrResult.error)
       return NextResponse.json({
         success: false,
         error: "Failed to process image",
@@ -60,7 +39,7 @@ export async function POST(request: NextRequest) {
     const extractedPlate = extractValidPlate(ocrResult)
 
     if (!extractedPlate) {
-      console.log("[v0] Could not extract valid plate from OCR result")
+      console.log("[v1] Could not extract valid plate from OCR result")
       return NextResponse.json({
         success: true,
         found: false,
@@ -68,13 +47,20 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    console.log("[v0] Extracted plate number:", extractedPlate, "Confidence:", ocrResult.confidence)
+    console.log(
+      `[v1] Extracted Plate: ${extractedPlate}, Confidence: ${ocrResult.confidence?.toFixed(
+        2
+      )}%`
+    )
 
     // Search for vehicle in database
-    const student = vehicleDatabase.find((v) => v.vehicleNumber === extractedPlate)
+    const { db } = await connectToDatabase()
+    const student = await db.collection("vehicles").findOne({
+      vehicleNumber: extractedPlate,
+    })
 
     if (student) {
-      console.log("[v0] Vehicle found in database:", extractedPlate)
+      console.log("[v1] Vehicle found in database:", extractedPlate)
       return NextResponse.json({
         success: true,
         found: true,
@@ -88,7 +74,7 @@ export async function POST(request: NextRequest) {
         ocrConfidence: ocrResult.confidence,
       })
     } else {
-      console.log("[v0] Vehicle not found in database:", extractedPlate)
+      console.log("[v1] Vehicle not found in database:", extractedPlate)
       return NextResponse.json({
         success: true,
         found: false,

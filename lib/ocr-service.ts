@@ -18,11 +18,13 @@ interface OCRResult {
   error?: string
 }
 
-export async function extractPlateNumberFromImage(imageData: string): Promise<OCRResult> {
+export async function extractPlateNumberFromImage(
+  imageData: string
+): Promise<OCRResult> {
   try {
     // In development/testing, use mock data
     if (process.env.NODE_ENV === "development") {
-      return mockExtractPlateNumber(imageData)
+      // return mockExtractPlateNumber(imageData);
     }
 
     // Production: Call actual OCR service
@@ -38,17 +40,62 @@ export async function extractPlateNumberFromImage(imageData: string): Promise<OC
 }
 
 async function performOCR(imageData: string): Promise<OCRResult> {
-  // Convert base64 image to buffer if needed
-  // Extract text using OCR library
+  const apiKey = process.env.PLATE_RECOGNIZER_API_KEY
+  if (!apiKey) {
+    console.error("PLATE_RECOGNIZER_API_KEY is not set.")
+    return {
+      success: false,
+      error: "API key not configured",
+    }
+  }
 
-  // Example with Tesseract (would require serverless deployment support)
-  // const { createWorker } = require('tesseract.js');
-  // const worker = await createWorker();
-  // const { data: { text } } = await worker.recognize(imageBuffer);
-  // await worker.terminate();
+  // The API expects a base64 string without the data URL prefix
+  const base64Image = imageData.split(",")
 
-  // For now, return mock data
-  return mockExtractPlateNumber(imageData)
+  try {
+    const response = await fetch("https://api.platerecognizer.com/v1/plate-reader/", {
+      method: "POST",
+      headers: {
+        "Authorization": `Token ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        upload: base64Image,
+        region: "in", // Specify the region for Indian license plates
+      }),
+    })
+
+    if (!response.ok) {
+      const errorData = await response.json()
+      console.error("Plate Recognizer API Error:", errorData)
+      return {
+        success: false,
+        error: `API request failed with status ${response.status}`,
+      }
+    }
+
+    const data = await response.json()
+
+    if (data.results && data.results.length > 0) {
+      const plate = data.results
+      return {
+        success: true,
+        plateNumber: plate.plate,
+        confidence: plate.score,
+      }
+    } else {
+      return {
+        success: false,
+        error: "No license plate found",
+      }
+    }
+  } catch (error) {
+    console.error("Error calling Plate Recognizer API:", error)
+    return {
+      success: false,
+      error: "Failed to connect to the OCR service",
+    }
+  }
 }
 
 function mockExtractPlateNumber(imageData: string): OCRResult {
