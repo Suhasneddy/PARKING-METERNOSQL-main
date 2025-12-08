@@ -91,6 +91,17 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
   }
 
   if (isUnsupported) {
+    // Check if the browser is Brave on Android
+    if (navigator.userAgent.includes("Brave") && navigator.userAgent.includes("Android")) {
+      return (
+        <Card className="p-8 text-center">
+          <p className="text-red-500 mb-4">
+            Camera is not fully supported on this version of Brave for Android. Please try a different browser.
+          </p>
+        </Card>
+      );
+    }
+  }
     return (
       <Card className="p-8 text-center">
         <p className="text-red-500 mb-4">
