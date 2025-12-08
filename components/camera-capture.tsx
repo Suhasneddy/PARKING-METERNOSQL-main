@@ -33,12 +33,15 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
         const stream = await navigator.mediaDevices.getUserMedia({
           video: { facingMode: "environment" },
         });
-        if (videoRef.current) {
+        if (videoRef.current && videoRef.current instanceof HTMLVideoElement) {
           videoRef.current.srcObject = stream;
           setHasPermission(true);
         }
       } catch (err) {
         console.error("Camera access denied:", err);
+        if (err instanceof DOMException) {
+          console.error("DOMException type:", err.name, err.message);
+        }
         setHasPermission(false);
       }
     };
