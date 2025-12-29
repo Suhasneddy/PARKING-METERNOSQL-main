@@ -18,6 +18,12 @@ export default function Home() {
             <Link href="/vehicles">
               <Button>Manage Vehicles</Button>
             </Link>
+            <Link href="/verification">
+              <Button variant="ghost">Verification</Button>
+            </Link>
+            <Link href="/login">
+              <Button>Login</Button>
+            </Link>
           </div>
         </div>
       </nav>

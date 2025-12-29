@@ -51,6 +51,8 @@ export default function RootLayout({
               <Link href="/dashboard" className="text-white">Dashboard</Link>
               <Link href="/register" className="text-white">Register</Link>
               <Link href="/vehicles" className="text-white">Vehicles</Link>
+              <Link href="/verification" className="text-white">Verification</Link>
+              <Link href="/login" className="text-white">Login</Link>
             </div>
           </div>
         </nav>

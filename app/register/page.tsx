@@ -46,7 +46,6 @@ export default function RegisterPage() {
       }
 
       setSuccess("Student registered successfully!")
-      router.push("/dashboard")
     } catch (err: any) {
       console.error("Registration failed:", err)
       setError(err?.message || "Something went wrong")
