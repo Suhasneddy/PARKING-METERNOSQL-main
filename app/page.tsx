@@ -18,6 +18,9 @@ export default function Home() {
             <Link href="/dashboard">
               <Button>Verify Plate</Button>
             </Link>
+            <Link href="/test">
+              <Button variant="ghost">Test</Button>
+            </Link>
           </div>
         </div>
       </nav>
