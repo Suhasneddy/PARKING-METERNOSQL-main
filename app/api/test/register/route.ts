@@ -1,17 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 
-const checkFields = <T>(fields: T) => {
-  // Add your field checking logic here
-  return fields;
-};
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: Request) {
   try {
-    // Remove the checkFields function call
     // Add your route logic here
-    res.status(200).json({ message: 'Test register route' });
+    return NextResponse.json({ message: 'Test register route' }, { status: 200 });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
   }
 }
+
