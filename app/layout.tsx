@@ -1,11 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Roboto } from 'next/font/google'
+// Remove this line
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const geist = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
+// Remove this line
 
 export const metadata: Metadata = {
   title: "Student Parking Meter",
@@ -37,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${geist.className} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
