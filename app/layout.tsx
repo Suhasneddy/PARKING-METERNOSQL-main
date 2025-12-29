@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Roboto } from 'next/font/google'
 // Remove this line
 import { Analytics } from "@vercel/analytics/next"
@@ -43,6 +44,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.className} font-sans antialiased`}>
+        <nav className="bg-gray-800 p-4">
+          <div className="container mx-auto flex justify-between">
+            <div className="flex space-x-4">
+              <Link href="/" className="text-white">Home</Link>
+              <Link href="/dashboard" className="text-white">Dashboard</Link>
+              <Link href="/register" className="text-white">Register</Link>
+              <Link href="/test" className="text-white">Test</Link>
+            </div>
+          </div>
+        </nav>
         {children}
         <Analytics />
       </body>
