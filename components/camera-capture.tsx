@@ -21,10 +21,10 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
         typeof navigator.mediaDevices === "undefined" ||
         typeof navigator.mediaDevices.getUserMedia === "undefined"
       ) {
-        console.error("Camera API is not supported in this browser.")
-        setIsUnsupported(true)
-        setHasPermission(false)
-        return
+        console.warn("Camera API is not supported in this browser.  Please ensure your browser supports the camera API and that it is enabled.");
+        setIsUnsupported(true);
+        setHasPermission(false);
+        return;
       }
 
       try {
