@@ -2,9 +2,12 @@ import { connectToDatabase } from "@/lib/mongodb";
 
 export async function POST(req: Request) {
   try {
+    console.log("Register API endpoint hit");
     const payload = await req.json();
+    console.log("Received payload:", payload);
 
     const { db } = await connectToDatabase();
+    console.log("Connected to database");
 
     const result = await db.collection("students").insertOne({
       studentName: payload.studentName,
@@ -15,6 +18,8 @@ export async function POST(req: Request) {
       year: payload.year,
       registrationDate: new Date(),
     });
+
+    console.log("MongoDB insert result:", result);
 
     return new Response(
       JSON.stringify({
