@@ -1,11 +1,17 @@
-[00:00:01.203] Server  LOG      ✓ Ready in 826ms
-[00:00:36.258] Server  WARN     ⚠ Cross origin request detected from 192.168.0.4 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:36.293] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:36.669] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:36.669] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:36.669] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.0.4:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://192.168.0.4:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1765223465776}
-[00:00:37.336] Server  ERROR    ⨯ ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:115:5
+[00:00:01.777] Server  LOG      ✓ Ready in 1201ms
+[00:00:13.694] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.990] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:13.990] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:13.990] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1766990372366}
+[00:00:28.486] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:28.670] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:28.670] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:28.670] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1766990387041}
+[00:02:08.118] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:08.293] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:08.294] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:02:08.294] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1766990486673}
+[00:02:12.298] Server  ERROR    ⨯ ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:115:5
 Parsing ecmascript source code failed
   113 |
   114 |   if (hasPermission === false) {
@@ -32,13 +38,13 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
 
@@ -57,13 +63,13 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
 
@@ -111,16 +117,16 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
-[00:00:37.478] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+[00:02:12.423] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -164,14 +170,14 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:38.195] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
+[00:02:13.235] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -215,14 +221,14 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:38.195] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
+[00:02:13.235] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -266,14 +272,14 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:38.216] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
+[00:02:13.855] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -317,14 +323,14 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:38.252] Server  ERROR    ⨯ ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:115:5
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
+[00:02:13.887] Server  ERROR    ⨯ ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:115:5
 Parsing ecmascript source code failed
   113 |
   114 |   if (hasPermission === false) {
@@ -351,13 +357,13 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
 
@@ -376,13 +382,13 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
 
@@ -430,16 +436,16 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
-[00:00:38.616] Browser ERROR   uncaughtError: Error: ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+[00:02:14.068] Browser ERROR   uncaughtError: Error: ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -483,16 +489,16 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
 
-[00:00:39.012] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+[00:02:14.258] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -536,14 +542,14 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:39.012] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
+[00:02:14.258] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
 Parsing ecmascript source code failed
   126 |   }
   127 |
@@ -587,1255 +593,10 @@ Return statement is not allowed here
 Import traces:
   Client Component Browser:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component Browser]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
 
   Client Component SSR:
     ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:39.012] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:39.974] Browser ERROR   uncaughtError: Error: ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-[00:00:40.153] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:40.153] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:44.488] Browser ERROR   uncaughtError: Error: ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-[00:00:44.656] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:44.744] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:55.592] Server  ERROR    ⨯ ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:115:5
-Parsing ecmascript source code failed
-  113 |
-  114 |   if (hasPermission === false) {
-> 115 |     return (
-      |     ^^^^^^^^
-> 116 |       <Card className="p-8 text-center">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 117 |         <p className="text-red-500 mb-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 118 |           Camera permission denied. Please enable camera access in your browser settings.
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 119 |         </p>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 120 |       </Card>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 121 |     )
-      | ^^^^^^
-  122 |   }
-  123 |
-  124 |   if (hasPermission === null) {
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-
-./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:125:5
-Parsing ecmascript source code failed
-  123 |
-  124 |   if (hasPermission === null) {
-> 125 |     return <Card className="p-8 text-center">Requesting camera access...</Card>
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  126 |   }
-  127 |
-  128 |   return (
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-
-./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-[00:00:55.883] Browser ERROR   uncaughtError: Error: ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-[00:00:56.094] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:56.094] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:56.102] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:56.102] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:59.638] Browser ERROR   uncaughtError: Error: ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-
-[00:00:59.802] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:00:59.803] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:01:31.827] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:01:32.091] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:01:32.091] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:02:53.478] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:02:53.478] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:02:58.293] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-[00:02:58.293] Browser ERROR   ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx:128:3
-Parsing ecmascript source code failed
-  126 |   }
-  127 |
-> 128 |   return (
-      |   ^^^^^^^^
-> 129 |     <div className="space-y-4">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 130 |       <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 131 |         <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 132 |         <canvas ref={canvasRef} className="hidden" />
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 133 |         <div className="absolute inset-0 pointer-events-none">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 134 |           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 135 |             <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 136 |           </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 137 |         </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 138 |       </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 139 |       <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 140 |         {isLoading ? "Processing..." : "Capture License Plate"}
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 141 |       </Button>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 142 |     </div>
-      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> 143 |   )
-      | ^^^^
-  144 | }
-  145 |
-
-Return statement is not allowed here
-
-Import traces:
-  Client Component Browser:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component Browser]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Client Component SSR]
-    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/dashboard/page.tsx [Server Component]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Client Component SSR]
+    ./OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [Server Component]
