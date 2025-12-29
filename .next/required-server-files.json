@@ -1,10 +1,12 @@
 {
   "version": 1,
   "config": {
-    "env": {},
+    "env": {
+      "MONGODB_URI": "mongodb+srv://snr200564_db_user:Suhas200564@cluster0.kx4p8mt.mongodb.net/"
+    },
     "webpack": null,
     "typescript": {
-      "ignoreBuildErrors": true
+      "ignoreBuildErrors": false
     },
     "typedRoutes": false,
     "distDir": ".next",
@@ -66,7 +68,7 @@
       "qualities": [
         75
       ],
-      "unoptimized": true
+      "unoptimized": false
     },
     "devIndicators": {
       "position": "bottom-left"
