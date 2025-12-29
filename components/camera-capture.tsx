@@ -1,8 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 
 interface CameraCaptureProps {
   onCapture: (imageData: string) => void
@@ -12,41 +10,43 @@ interface CameraCaptureProps {
 export function CameraCapture({ onCapture, isLoading = false }: CameraCaptureProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [hasPermission, setHasPermission] = useState<boolean>(true)
-  const [isCameraActive, setIsCameraActive] = useState(false)
+
+  const [hasPermission, setHasPermission] = useState<boolean>(false)
   const [isUnsupported, setIsUnsupported] = useState(false)
 
   useEffect(() => {
     const requestCameraAccess = async () => {
       if (
+        typeof navigator === "undefined" ||
         typeof navigator.mediaDevices === "undefined" ||
         typeof navigator.mediaDevices.getUserMedia === "undefined"
       ) {
-        console.error("Camera API is not supported in this browser.");
-        setIsUnsupported(true);
-        setHasPermission(false);
-        return;
+        console.error("Camera API is not supported in this browser.")
+        setIsUnsupported(true)
+        setHasPermission(false)
+        return
       }
 
       try {
-        console.log("Requesting camera access...");
+        console.log("Requesting camera access...")
         const stream = await navigator.mediaDevices.getUserMedia({
           video: { facingMode: "environment" },
-        });
-        if (videoRef.current && videoRef.current instanceof HTMLVideoElement) {
-          videoRef.current.srcObject = stream;
-          setHasPermission(true);
+        })
+
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream
+          setHasPermission(true)
         }
       } catch (err) {
-        console.error("Camera access denied:", err);
+        console.error("Camera access denied:", err)
         if (err instanceof DOMException) {
-          console.error("DOMException type:", err.name, err.message);
+          console.error("DOMException type:", err.name, err.message)
         }
-        setHasPermission(false);
+        setHasPermission(false)
       }
-    };
+    }
 
-    requestCameraAccess();
+    requestCameraAccess()
 
     return () => {
       if (videoRef.current?.srcObject) {
@@ -60,19 +60,15 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
     if (canvasRef.current && videoRef.current) {
       const context = canvasRef.current.getContext("2d")
       if (context) {
-        // Define the dimensions of the highlighted rectangle
-        const rectWidth = 256; // w-64
-        const rectHeight = 96; // h-24
+        const rectWidth = 256
+        const rectHeight = 96
 
-        // Calculate the position of the rectangle to be in the center
         const sx = (videoRef.current.videoWidth - rectWidth) / 2
         const sy = (videoRef.current.videoHeight - rectHeight) / 2
 
-        // Set canvas dimensions to the size of the rectangle
         canvasRef.current.width = rectWidth
         canvasRef.current.height = rectHeight
 
-        // Draw the cropped image from the video onto the canvas
         context.drawImage(
           videoRef.current,
           sx,
@@ -84,6 +80,7 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
           rectWidth,
           rectHeight
         )
+
         const imageData = canvasRef.current.toDataURL("image/jpeg")
         onCapture(imageData)
       }
@@ -91,54 +88,51 @@ export function CameraCapture({ onCapture, isLoading = false }: CameraCapturePro
   }
 
   if (isUnsupported) {
-    // Check if the browser is Brave on Android
-    if (navigator.userAgent.includes("Brave") && navigator.userAgent.includes("Android")) {
-      return (
-        <Card className="p-8 text-center">
-          <p className="text-red-500 mb-4">
-            Camera is not fully supported on this version of Brave for Android. Please try a different browser.
-          </p>
-        </Card>
-      );
-    }
-  }
+    const ua = typeof navigator !== "undefined" ? navigator.userAgent.toLowerCase() : ""
+    const isBraveAndroid = ua.includes("brave") && ua.includes("android")
+
     return (
-      <Card className="p-8 text-center">
+      <div className="p-8 text-center border rounded-md">
         <p className="text-red-500 mb-4">
-          Camera is not supported on this browser. Please use a different browser.
+          {isBraveAndroid
+            ? "Camera is not fully supported on this version of Brave for Android. Please try a different browser."
+            : "Camera is not supported on this browser. Please use a different browser."}
         </p>
-      </Card>
-    );
+      </div>
+    )
   }
 
-  if (hasPermission === false) {
+  if (!hasPermission) {
     return (
-      <Card className="p-8 text-center">
-        <p className="text-red-500 mb-4">
-          Camera permission denied. Please enable camera access in your browser settings.
-        </p>
-      </Card>
+      <div className="p-8 text-center border rounded-md">
+        <p className="mb-4">Please allow camera permission in your browser.</p>
+      </div>
     )
   }
 
   if (hasPermission === null) {
-    return <Card className="p-8 text-center">Requesting camera access...</Card>
+    return <div className="p-8 text-center border rounded-md">Requesting camera access...</div>
   }
 
   return (
-    <div className="space-y-4">
-      <div className="relative rounded-lg overflow-hidden border-2 border-primary/30 bg-black">
-        <video ref={videoRef} autoPlay playsInline className="w-full aspect-video object-cover" />
+    <div>
+      <div className="p-4 text-center border rounded-md space-y-4">
+        <video
+          ref={videoRef}
+          autoPlay
+          playsInline
+          className="mx-auto rounded-md max-w-full"
+        />
         <canvas ref={canvasRef} className="hidden" />
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-64 h-24 border-2 border-yellow-400 rounded-lg opacity-75"></div>
-          </div>
-        </div>
+        <button
+          type="button"
+          onClick={handleCapture}
+          disabled={isLoading}
+          className="px-4 py-2 rounded-md border disabled:opacity-50"
+        >
+          {isLoading ? "Capturing..." : "Capture"}
+        </button>
       </div>
-      <Button onClick={handleCapture} disabled={isLoading} className="w-full bg-primary hover:bg-primary/90" size="lg">
-        {isLoading ? "Processing..." : "Capture License Plate"}
-      </Button>
     </div>
   )
 }
