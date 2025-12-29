@@ -6,19 +6,20 @@ export async function POST(req: Request) {
 
     const { db } = await connectToDatabase();
 
-    const result = await db.collection("vehicles").insertOne({
+    const result = await db.collection("students").insertOne({
       studentName: payload.studentName,
-      usn: payload.usn,
-      hostelRoom: payload.hostelRoom,
-      vehicleNumber: payload.vehicleNumber,
-      licensePlateImage: payload.licensePlateImage,
+      studentId: payload.studentId,
+      email: payload.email,
+      phoneNumber: payload.phoneNumber,
+      department: payload.department,
+      year: payload.year,
       registrationDate: new Date(),
     });
 
     return new Response(
       JSON.stringify({
         success: true,
-        message: "Vehicle registered successfully",
+        message: "Student registered successfully",
         data: { _id: result.insertedId },
       }),
       { status: 201, headers: { "Content-Type": "application/json" } }

@@ -50,7 +50,7 @@ export default function RootLayout({
               <Link href="/" className="text-white">Home</Link>
               <Link href="/dashboard" className="text-white">Dashboard</Link>
               <Link href="/register" className="text-white">Register</Link>
-              <Link href="/test" className="text-white">Test</Link>
+              <Link href="/vehicles" className="text-white">Vehicles</Link>
             </div>
           </div>
         </nav>
