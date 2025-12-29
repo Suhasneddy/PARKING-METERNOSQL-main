@@ -99,7 +99,6 @@
     --color-red-600: #e40014;
     --color-red-700: #bf000f;
     --color-red-900: #82181a;
-    --color-yellow-400: #fac800;
     --color-green-50: #f0fdf4;
     --color-green-200: #b9f8cf;
     --color-green-900: #0d542b;
@@ -163,7 +162,6 @@
       --color-red-600: lab(48.4493% 77.4328 61.5452);
       --color-red-700: lab(40.4273% 67.2623 53.7441);
       --color-red-900: lab(28.5139% 44.5539 29.0463);
-      --color-yellow-400: lab(83.2664% 8.65132 106.895);
       --color-green-50: lab(98.1563% -5.60117 2.75913);
       --color-green-200: lab(92.4222% -26.4702 12.9427);
       --color-green-900: lab(30.797% -29.6927 17.382);
@@ -945,10 +943,6 @@
     height: calc(var(--spacing) * 12);
   }
 
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
-
   .h-\[1\.15rem\] {
     height: 1.15rem;
   }
@@ -1115,6 +1109,10 @@
 
   .max-w-\[calc\(100\%-2rem\)\] {
     max-width: calc(100% - 2rem);
+  }
+
+  .max-w-full {
+    max-width: 100%;
   }
 
   .max-w-max {
@@ -1561,11 +1559,6 @@
     border-width: 0;
   }
 
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
@@ -1667,10 +1660,6 @@
     border-color: #0000;
   }
 
-  .border-yellow-400 {
-    border-color: var(--color-yellow-400);
-  }
-
   .border-t-transparent {
     border-top-color: #0000;
   }
@@ -1689,10 +1678,6 @@
 
   .bg-background {
     background-color: var(--background);
-  }
-
-  .bg-black {
-    background-color: var(--color-black);
   }
 
   .bg-black\/50 {
@@ -1886,10 +1871,6 @@
 
   .fill-primary {
     fill: var(--primary);
-  }
-
-  .object-cover {
-    object-fit: cover;
   }
 
   .p-0 {
@@ -2308,10 +2289,6 @@
 
   .opacity-70 {
     opacity: .7;
-  }
-
-  .opacity-75 {
-    opacity: .75;
   }
 
   .opacity-90 {

@@ -202,11 +202,182 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-const e = new Error("Could not parse module '[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx'\n\nReturn statement is not allowed here");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "CameraCapture",
+    ()=>CameraCapture
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+function CameraCapture({ onCapture, isLoading = false }) {
+    _s();
+    const videoRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const canvasRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [hasPermission, setHasPermission] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isUnsupported, setIsUnsupported] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "CameraCapture.useEffect": ()=>{
+            const requestCameraAccess = {
+                "CameraCapture.useEffect.requestCameraAccess": async ()=>{
+                    if (typeof navigator === "undefined" || typeof navigator.mediaDevices === "undefined" || typeof navigator.mediaDevices.getUserMedia === "undefined") {
+                        console.error("Camera API is not supported in this browser.");
+                        setIsUnsupported(true);
+                        setHasPermission(false);
+                        return;
+                    }
+                    try {
+                        console.log("Requesting camera access...");
+                        const stream = await navigator.mediaDevices.getUserMedia({
+                            video: {
+                                facingMode: "environment"
+                            }
+                        });
+                        if (videoRef.current) {
+                            videoRef.current.srcObject = stream;
+                            setHasPermission(true);
+                        }
+                    } catch (err) {
+                        console.error("Camera access denied:", err);
+                        if (err instanceof DOMException) {
+                            console.error("DOMException type:", err.name, err.message);
+                        }
+                        setHasPermission(false);
+                    }
+                }
+            }["CameraCapture.useEffect.requestCameraAccess"];
+            requestCameraAccess();
+            return ({
+                "CameraCapture.useEffect": ()=>{
+                    if (videoRef.current?.srcObject) {
+                        const tracks = videoRef.current.srcObject.getTracks();
+                        tracks.forEach({
+                            "CameraCapture.useEffect": (track)=>track.stop()
+                        }["CameraCapture.useEffect"]);
+                    }
+                }
+            })["CameraCapture.useEffect"];
+        }
+    }["CameraCapture.useEffect"], []);
+    const handleCapture = ()=>{
+        if (canvasRef.current && videoRef.current) {
+            const context = canvasRef.current.getContext("2d");
+            if (context) {
+                const rectWidth = 256;
+                const rectHeight = 96;
+                const sx = (videoRef.current.videoWidth - rectWidth) / 2;
+                const sy = (videoRef.current.videoHeight - rectHeight) / 2;
+                canvasRef.current.width = rectWidth;
+                canvasRef.current.height = rectHeight;
+                context.drawImage(videoRef.current, sx, sy, rectWidth, rectHeight, 0, 0, rectWidth, rectHeight);
+                const imageData = canvasRef.current.toDataURL("image/jpeg");
+                onCapture(imageData);
+            }
+        }
+    };
+    if (isUnsupported) {
+        const ua = typeof navigator !== "undefined" ? navigator.userAgent.toLowerCase() : "";
+        const isBraveAndroid = ua.includes("brave") && ua.includes("android");
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-8 text-center border rounded-md",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-red-500 mb-4",
+                children: isBraveAndroid ? "Camera is not fully supported on this version of Brave for Android. Please try a different browser." : "Camera is not supported on this browser. Please use a different browser."
+            }, void 0, false, {
+                fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+                lineNumber: 96,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+            lineNumber: 95,
+            columnNumber: 7
+        }, this);
+    }
+    if (!hasPermission) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-8 text-center border rounded-md",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "mb-4",
+                children: "Please allow camera permission in your browser."
+            }, void 0, false, {
+                fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+                lineNumber: 108,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+            lineNumber: 107,
+            columnNumber: 7
+        }, this);
+    }
+    if (hasPermission === null) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-8 text-center border rounded-md",
+            children: "Requesting camera access..."
+        }, void 0, false, {
+            fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+            lineNumber: 114,
+            columnNumber: 12
+        }, this);
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-4 text-center border rounded-md space-y-4",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                    ref: videoRef,
+                    autoPlay: true,
+                    playsInline: true,
+                    className: "mx-auto rounded-md max-w-full"
+                }, void 0, false, {
+                    fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+                    lineNumber: 120,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
+                    ref: canvasRef,
+                    className: "hidden"
+                }, void 0, false, {
+                    fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+                    lineNumber: 126,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Documents$2f$NO__SQL$2f$PARKING$2d$METERNOSQL$2d$main$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    type: "button",
+                    onClick: handleCapture,
+                    disabled: isLoading,
+                    className: "px-4 py-2 rounded-md border disabled:opacity-50",
+                    children: isLoading ? "Capturing..." : "Capture"
+                }, void 0, false, {
+                    fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+                    lineNumber: 127,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+            lineNumber: 119,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/components/camera-capture.tsx",
+        lineNumber: 118,
+        columnNumber: 5
+    }, this);
+}
+_s(CameraCapture, "zWKeJE+31NDuc9VCQJmAupOE/tY=");
+_c = CameraCapture;
+var _c;
+__turbopack_context__.k.register(_c, "CameraCapture");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
 }),
 "[project]/OneDrive/Documents/NO SQL/PARKING-METERNOSQL-main/app/register/page.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
