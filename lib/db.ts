@@ -27,6 +27,7 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      dbName: 'parking_system' // Use same database as MongoDB client
     };
     cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => mongoose);
   }
@@ -34,15 +35,10 @@ async function dbConnect() {
   return cached.conn;
 }
 
-// ----------------------------------------------------
-// Mongoose Schemas and Models for Parking Management
-// ----------------------------------------------------
-
-// Define the User Schema (placeholder)
+// Define the User Schema
 const UserSchema = new mongoose.Schema({
   userId: { type: String, required: true, unique: true },
   name: { type: String, required: true },
-  // Add other user properties as needed
 }, { timestamps: true });
 
 export const User = mongoose.models.User || mongoose.model('User', UserSchema);
@@ -50,11 +46,10 @@ export const User = mongoose.models.User || mongoose.model('User', UserSchema);
 // Define the Vehicle Schema
 const VehicleSchema = new mongoose.Schema({
   numberPlate: { type: String, required: true, unique: true },
-  vehicleNumber: { type: String, required: true, unique: true }, // For backward compatibility
+  vehicleNumber: { type: String, required: true, unique: true },
   studentId: { type: String, required: true },
   owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
   registrationDate: { type: Date, default: Date.now },
-  // Add other vehicle properties as needed
 }, { timestamps: true });
 
 export const Vehicle = mongoose.models.Vehicle || mongoose.model('Vehicle', VehicleSchema);
