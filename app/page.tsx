@@ -1,113 +1,48 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import Link from 'next/link';
+import { MapPin, Car } from 'lucide-react';
 
-export default function Home() {
+export default function Dashboard() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-muted">
-      {/* Navigation */}
-      <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary">ParkMeter</div>
-          <div className="flex gap-4">
-            <Link href="/register">
-              <Button variant="ghost">Register Student</Button>
-            </Link>
-            <Link href="/vehicles">
-              <Button>Manage Vehicles</Button>
-            </Link>
-            <Link href="/verification">
-              <Button variant="ghost">Verification</Button>
-            </Link>
-            <Link href="/login">
-              <Button>Login</Button>
-            </Link>
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans">
+      {/* Navbar */}
+      <nav className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-2 font-bold text-xl text-slate-900 dark:text-white">
+            <Car className="h-6 w-6 text-blue-600" />
+            <span>ParkingManager</span>
           </div>
+          <div className="h-8 w-8 rounded-full bg-slate-200 dark:bg-slate-800" />
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-5xl font-bold text-foreground leading-tight">
-              Smart Parking Management for <span className="text-primary">Students</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              A simplified system for student and vehicle registration and verification.
-            </p>
-            <div className="flex gap-4">
-              <Link href="/register">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Register Now
-                </Button>
-              </Link>
-              <Link href="/vehicles">
-                <Button size="lg" variant="outline">
-                  Manage Vehicles
-                </Button>
-              </Link>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-3xl"></div>
-            <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-2">
-                  <div className="text-4xl">🚗</div>
-                  <p className="text-sm text-muted-foreground">Vehicle Management</p>
-                </div>
+      <main className="max-w-7xl mx-auto p-6 lg:p-8">
+        <header className="mb-10">
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Dashboard</h1>
+          <p className="text-slate-600 dark:text-slate-400">Overview of your parking facility.</p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Parking Layout Card */}
+          <Link href="/parking-layout" className="group">
+            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 hover:border-blue-500 hover:shadow-md transition-all duration-200 h-full flex flex-col">
+              <div className="h-12 w-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+                Parking Layout
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm flex-1">
+                Visual map of all parking slots. Manage occupancy and bookings in real-time.
+              </p>
+              <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium">
+                View Map &rarr;
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-4xl font-bold text-center mb-16">Key Features</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="p-6 border-primary/20 hover:border-primary/40 transition-colors">
-            <div className="text-4xl mb-4">🎓</div>
-            <h3 className="text-xl font-semibold mb-2">Student Registration</h3>
-            <p className="text-muted-foreground">
-              Easily register students with their details.
-            </p>
-          </Card>
-          <Card className="p-6 border-primary/20 hover:border-primary/40 transition-colors">
-            <div className="text-4xl mb-4">🚗</div>
-            <h3 className="text-xl font-semibold mb-2">Vehicle Registration</h3>
-            <p className="text-muted-foreground">
-              Register vehicles and associate them with students.
-            </p>
-          </Card>
-          <Card className="p-6 border-primary/20 hover:border-primary/40 transition-colors">
-            <div className="text-4xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold mb-2">Manual Verification</h3>
-            <p className="text-muted-foreground">
-              Manually verify vehicles using their number plates.
-            </p>
-          </Card>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/30 p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get started with ParkMeter today.
-          </p>
-          <Link href="/register">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Start Registration
-            </Button>
           </Link>
-        </Card>
-      </section>
-    </main>
-  )
+        </div>
+      </main>
+    </div>
+  );
 }
-
