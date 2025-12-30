@@ -1,85 +1,242 @@
-// PARKING-METERNOSQL-main/app/parking-layout/page.tsx
 "use client";
 
-import React from 'react';
-import { Car } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Car, MapPin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useToast } from '@/hooks/use-toast';
 
-interface ParkingSpot {
-  id: string;
-  name: string;
-  status: 'available' | 'occupied' | 'reserved';
+interface ParkingSlot {
+  _id: string;
+  slotId: string;
+  status: 'available' | 'occupied' | 'reserved' | 'maintenance';
+  occupiedByVehicle?: { numberPlate: string };
 }
 
-const mockParkingSpots: ParkingSpot[] = [
-  { id: 'P001', name: 'Spot 1A', status: 'available' },
-  { id: 'P002', name: 'Spot 1B', status: 'occupied' },
-  { id: 'P003', name: 'Spot 1C', status: 'available' },
-  { id: 'P004', name: 'Spot 1D', status: 'reserved' },
-  { id: 'P005', name: 'Spot 2A', status: 'available' },
-  { id: 'P006', name: 'Spot 2B', status: 'available' },
-  { id: 'P007', name: 'Spot 2C', status: 'occupied' },
-  { id: 'P008', name: 'Spot 2D', status: 'available' },
-  { id: 'P009', name: 'Spot 3A', status: 'reserved' },
-  { id: 'P010', name: 'Spot 3B', status: 'available' },
-];
-
 export default function ParkingLayoutPage() {
-  const getStatusVariant = (status: ParkingSpot['status']) => {
-    switch (status) {
-      case 'available':
-        return 'success'; // Assuming a 'success' variant exists or define one
-      case 'occupied':
-        return 'destructive'; // Assuming a 'destructive' variant exists or define one
-      case 'reserved':
-        return 'default';
-      default:
-        return 'default';
+  const [slots, setSlots] = useState<ParkingSlot[]>([]);
+  const [selectedSlot, setSelectedSlot] = useState<ParkingSlot | null>(null);
+  const [vehicleNumber, setVehicleNumber] = useState('');
+  const [showBooking, setShowBooking] = useState(false);
+  const { toast } = useToast();
+
+  // Generate 40 slots if none exist
+  const generateSlots = () => {
+    const generatedSlots: ParkingSlot[] = [];
+    for (let i = 1; i <= 40; i++) {
+      generatedSlots.push({
+        _id: `slot-${i}`,
+        slotId: `P${i.toString().padStart(3, '0')}`,
+        status: 'available'
+      });
+    }
+    return generatedSlots;
+  };
+
+  useEffect(() => {
+    fetchSlots();
+  }, []);
+
+  const fetchSlots = async () => {
+    try {
+      const response = await fetch('/api/parking-slots');
+      const data = await response.json();
+      if (data.success && data.data.length > 0) {
+        setSlots(data.data);
+      } else {
+        setSlots(generateSlots());
+      }
+    } catch (error) {
+      setSlots(generateSlots());
     }
   };
 
-  const handleSpotClick = (spot: ParkingSpot) => {
-    console.log(`Clicked on parking spot: ${spot.name}, Status: ${spot.status}`);
-    // Future: Open a dialog or sheet for more details/actions
+  const handleSlotClick = (slot: ParkingSlot) => {
+    setSelectedSlot(slot);
+    setShowBooking(false);
+    setVehicleNumber('');
+  };
+
+  const handleBookNow = () => {
+    if (selectedSlot?.status === 'available') {
+      setShowBooking(true);
+    }
+  };
+
+  const submitBooking = async () => {
+    if (!selectedSlot || !vehicleNumber.trim()) return;
+
+    try {
+      const response = await fetch('/api/parking-slots', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          slotId: selectedSlot.slotId,
+          vehicleNumber: vehicleNumber.trim()
+        })
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        toast({ title: "Success", description: data.message });
+        fetchSlots();
+        setShowBooking(false);
+        setVehicleNumber('');
+      } else {
+        toast({ 
+          title: "Error", 
+          description: data.message,
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({ 
+        title: "Error", 
+        description: "Failed to book slot",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const getSlotColor = (status: string) => {
+    switch (status) {
+      case 'available': return 'bg-green-500 hover:bg-green-600';
+      case 'occupied': return 'bg-red-500';
+      case 'reserved': return 'bg-yellow-500';
+      case 'maintenance': return 'bg-gray-500';
+      default: return 'bg-green-500';
+    }
+  };
+
+  const summary = {
+    total: 40,
+    occupied: slots.filter(s => s.status === 'occupied').length,
+    reserved: slots.filter(s => s.status === 'reserved').length,
+    maintenance: slots.filter(s => s.status === 'maintenance').length
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans">
-      <main className="max-w-7xl mx-auto p-6 lg:p-8">
-        <header className="mb-10">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Parking Layout</h1>
-          <p className="text-slate-600 dark:text-slate-400">Overview and management of parking spots.</p>
-        </header>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {mockParkingSpots.map((spot) => (
-            <Card
-              key={spot.id}
-              className="hover:shadow-md transition-shadow cursor-pointer"
-              onClick={() => handleSpotClick(spot)}
-            >
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">{spot.name}</CardTitle>
-                <Car className="h-4 w-4 text-muted-foreground" />
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold mb-2">
-                  <Badge variant={getStatusVariant(spot.status)}>
-                    {spot.status.charAt(0).toUpperCase() + spot.status.slice(1)}
-                  </Badge>
-                </div>
-                <p className="text-xs text-muted-foreground">ID: {spot.id}</p>
-                {/* Future: Add more details or a button */}
-                {/* <Button variant="outline" size="sm" className="mt-4">
-                  View Details
-                </Button> */}
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Summary */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-6">Parking Layout</h1>
+          <div className="grid grid-cols-4 gap-4 mb-6">
+            <Card>
+              <CardContent className="p-4 text-center">
+                <div className="text-2xl font-bold">{summary.total}</div>
+                <div className="text-sm text-gray-600">Total Slots</div>
               </CardContent>
             </Card>
-          ))}
+            <Card>
+              <CardContent className="p-4 text-center">
+                <div className="text-2xl font-bold text-red-600">{summary.occupied}</div>
+                <div className="text-sm text-gray-600">Occupied</div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-4 text-center">
+                <div className="text-2xl font-bold text-yellow-600">{summary.reserved}</div>
+                <div className="text-sm text-gray-600">Reserved</div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-4 text-center">
+                <div className="text-2xl font-bold text-gray-600">{summary.maintenance}</div>
+                <div className="text-sm text-gray-600">Maintenance</div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </main>
+
+        <div className="flex gap-6">
+          {/* Parking Area Map */}
+          <div className="flex-1">
+            <h2 className="text-xl font-semibold mb-4">Parking Area Map</h2>
+            <div className="grid grid-cols-8 gap-2 p-4 bg-white rounded-lg shadow">
+              {slots.map((slot) => (
+                <div
+                  key={slot.slotId}
+                  onClick={() => handleSlotClick(slot)}
+                  className={`
+                    w-16 h-16 rounded cursor-pointer transition-all duration-200
+                    ${getSlotColor(slot.status)}
+                    ${selectedSlot?.slotId === slot.slotId ? 'ring-4 ring-blue-400' : ''}
+                    flex items-center justify-center text-white text-xs font-semibold
+                  `}
+                >
+                  {slot.slotId}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Slot Details Sidebar */}
+          <div className="w-80">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <MapPin className="h-5 w-5" />
+                  Slot Details
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {selectedSlot ? (
+                  <>
+                    <div>
+                      <div className="font-semibold">Slot ID: {selectedSlot.slotId}</div>
+                      <div className="text-sm text-gray-600 capitalize">
+                        Status: {selectedSlot.status}
+                      </div>
+                      {selectedSlot.occupiedByVehicle && (
+                        <div className="text-sm text-gray-600">
+                          Vehicle: {selectedSlot.occupiedByVehicle.numberPlate}
+                        </div>
+                      )}
+                    </div>
+                    
+                    {selectedSlot.status === 'available' && (
+                      <div className="space-y-3">
+                        {!showBooking ? (
+                          <Button onClick={handleBookNow} className="w-full">
+                            Book Now
+                          </Button>
+                        ) : (
+                          <div className="space-y-3">
+                            <Input
+                              placeholder="Enter Vehicle Number"
+                              value={vehicleNumber}
+                              onChange={(e) => setVehicleNumber(e.target.value)}
+                            />
+                            <div className="flex gap-2">
+                              <Button onClick={submitBooking} className="flex-1">
+                                Submit
+                              </Button>
+                              <Button 
+                                variant="outline" 
+                                onClick={() => setShowBooking(false)}
+                                className="flex-1"
+                              >
+                                Cancel
+                              </Button>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div className="text-gray-500 text-center py-8">
+                    Select a parking slot to view details
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

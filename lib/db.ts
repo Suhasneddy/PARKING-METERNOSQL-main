@@ -34,4 +34,53 @@ async function dbConnect() {
   return cached.conn;
 }
 
+// ----------------------------------------------------
+// Mongoose Schemas and Models for Parking Management
+// ----------------------------------------------------
+
+// Define the User Schema (placeholder)
+const UserSchema = new mongoose.Schema({
+  userId: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
+  // Add other user properties as needed
+}, { timestamps: true });
+
+export const User = mongoose.models.User || mongoose.model('User', UserSchema);
+
+// Define the Vehicle Schema
+const VehicleSchema = new mongoose.Schema({
+  numberPlate: { type: String, required: true, unique: true },
+  vehicleNumber: { type: String, required: true, unique: true }, // For backward compatibility
+  studentId: { type: String, required: true },
+  owner: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+  registrationDate: { type: Date, default: Date.now },
+  // Add other vehicle properties as needed
+}, { timestamps: true });
+
+export const Vehicle = mongoose.models.Vehicle || mongoose.model('Vehicle', VehicleSchema);
+
+// Define the ParkingSlot Schema
+const ParkingSlotSchema = new mongoose.Schema({
+  slotId: { type: String, required: true, unique: true },
+  status: {
+    type: String,
+    enum: ['available', 'occupied', 'reserved', 'maintenance'],
+    default: 'available',
+    required: true,
+  },
+  occupiedByVehicle: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Vehicle',
+    default: null,
+  },
+  reservedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    default: null,
+  },
+  lastUpdated: { type: Date, default: Date.now },
+}, { timestamps: true });
+
+export const ParkingSlot = mongoose.models.ParkingSlot || mongoose.model('ParkingSlot', ParkingSlotSchema);
+
 export default dbConnect;
