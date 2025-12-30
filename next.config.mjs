@@ -17,6 +17,8 @@ const nextConfig = {
   generateBuildId: async () => {
     return 'build-' + Date.now();
   },
+  // Force dynamic rendering for API routes
+  poweredByHeader: false,
 };
 
 export default nextConfig
