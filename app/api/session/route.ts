@@ -1,0 +1,45 @@
+import { connectToDatabase } from "@/lib/mongodb";
+
+export async function GET(req: Request) {
+  try {
+    const url = new URL(req.url);
+    const email = url.searchParams.get('email');
+    
+    if (!email) {
+      return new Response(
+        JSON.stringify({ success: false, message: "Email required" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    const { db } = await connectToDatabase();
+    const user = await db.collection("users").findOne({ email });
+    
+    if (!user) {
+      return new Response(
+        JSON.stringify({ success: false, message: "User not found" }),
+        { status: 404, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        user: {
+          email: user.email,
+          role: user.role,
+          _id: user._id
+        }
+      }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (err: any) {
+    return new Response(
+      JSON.stringify({
+        success: false,
+        message: err?.message || "Internal server error",
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
+}

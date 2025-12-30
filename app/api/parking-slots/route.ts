@@ -26,22 +26,36 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const { slotId, vehicleNumber } = await req.json();
+    const { slotId, vehicleNumber, studentId } = await req.json();
     
     await dbConnect();
+    const { db } = await connectToDatabase();
     
-    // Check if vehicle exists (check both numberPlate and vehicleNumber for compatibility)
+    // Check if vehicle exists in vehicles collection
     const vehicle = await Vehicle.findOne({
       $or: [
         { numberPlate: vehicleNumber },
         { vehicleNumber: vehicleNumber }
       ]
     });
+    
     if (!vehicle) {
       return new Response(
         JSON.stringify({
           success: false,
           message: "Number plate not registered",
+        }),
+        { status: 404, headers: { "Content-Type": "application/json" } }
+      );
+    }
+    
+    // Verify student exists
+    const student = await db.collection("students").findOne({ studentId });
+    if (!student) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Student not found",
         }),
         { status: 404, headers: { "Content-Type": "application/json" } }
       );

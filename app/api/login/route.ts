@@ -36,10 +36,13 @@ export async function POST(req: NextRequest) {
       .collection("users")
       .updateOne({ _id: user._id }, { $set: { lastLogin: new Date() } });
 
-    return NextResponse.json(
-      { success: true, message: "Login successful", role: user.role },
+    // Store user session in localStorage (client-side)
+    const response = NextResponse.json(
+      { success: true, message: "Login successful", role: user.role, user: { email: user.email, _id: user._id } },
       { status: 200 }
     );
+    
+    return response;
   } catch (err: any) {
     console.error("Login API error:", err);
     return NextResponse.json(
