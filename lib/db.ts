@@ -27,7 +27,16 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
-      dbName: 'parking_system' // Use same database as MongoDB client
+      dbName: 'parking_system', // Use same database as MongoDB client
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+      retryWrites: true,
+      w: 'majority' as const,
+      ssl: true,
+      tls: true,
+      tlsAllowInvalidCertificates: false,
+      tlsAllowInvalidHostnames: false,
     };
     cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => mongoose);
   }

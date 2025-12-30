@@ -1,7 +1,20 @@
 import { connectToDatabase } from "@/lib/mongodb";
 import dbConnect, { ParkingSlot, Vehicle } from "@/lib/db";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
+  // Skip during build time
+  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_URL) {
+    return new Response(
+      JSON.stringify({
+        success: false,
+        message: "This endpoint is not available during build time",
+      }),
+      { status: 503, headers: { "Content-Type": "application/json" } }
+    );
+  }
+
   try {
     const { db } = await connectToDatabase();
     await dbConnect();

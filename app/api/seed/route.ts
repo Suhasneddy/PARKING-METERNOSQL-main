@@ -1,7 +1,17 @@
 import { NextResponse } from 'next/server';
 import dbConnect, { Vehicle } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
+  // Skip during build time
+  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_URL) {
+    return NextResponse.json({
+      success: false,
+      message: "This endpoint is not available during build time",
+    }, { status: 503 });
+  }
+
   try {
     await dbConnect();
     
