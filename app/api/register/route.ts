@@ -6,7 +6,32 @@ export async function POST(req: Request) {
 
     const { db } = await connectToDatabase();
 
-    const result = await db.collection("students").insertOne({
+    // Check if student already exists
+    const existingStudent = await db.collection("students").findOne({ studentId: payload.studentId });
+    if (existingStudent) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Student ID already exists",
+        }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    // Check if email already exists
+    const existingUser = await db.collection("users").findOne({ email: payload.email });
+    if (existingUser) {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          message: "Email already registered",
+        }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    // Create student record
+    const studentResult = await db.collection("students").insertOne({
       studentName: payload.studentName,
       studentId: payload.studentId,
       email: payload.email,
@@ -16,11 +41,20 @@ export async function POST(req: Request) {
       registrationDate: new Date(),
     });
 
+    // Create user record for login
+    await db.collection("users").insertOne({
+      email: payload.email,
+      password: payload.studentId, // Use studentId as default password
+      role: "User",
+      studentId: payload.studentId,
+      createdAt: new Date(),
+    });
+
     return new Response(
       JSON.stringify({
         success: true,
-        message: "Student registered successfully",
-        data: { _id: result.insertedId },
+        message: "Student registered successfully. Use your email and Student ID as password to login.",
+        data: { _id: studentResult.insertedId },
       }),
       { status: 201, headers: { "Content-Type": "application/json" } }
     );

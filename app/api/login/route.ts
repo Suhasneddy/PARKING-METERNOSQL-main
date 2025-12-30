@@ -38,7 +38,16 @@ export async function POST(req: NextRequest) {
 
     // Store user session in localStorage (client-side)
     const response = NextResponse.json(
-      { success: true, message: "Login successful", role: user.role, user: { email: user.email, _id: user._id } },
+      { 
+        success: true, 
+        message: "Login successful", 
+        role: user.role, 
+        user: { 
+          email: user.email, 
+          _id: user._id,
+          studentId: user.studentId 
+        } 
+      },
       { status: 200 }
     );
     

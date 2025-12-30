@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { connectToDatabase } from "@/lib/mongodb"
+import dbConnect, { Vehicle } from "@/lib/db"
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,11 +11,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "No vehicle number provided" }, { status: 400 })
     }
 
-    // Search for vehicle in database
-    const { db } = await connectToDatabase()
-    const vehicle = await db.collection("vehicles").findOne({
-      vehicleNumber: vehicleNumber,
-    })
+    await dbConnect();
+    const { db } = await connectToDatabase();
+
+    // Search for vehicle using Vehicle model
+    const vehicle = await Vehicle.findOne({
+      $or: [
+        { vehicleNumber: vehicleNumber },
+        { numberPlate: vehicleNumber }
+      ]
+    });
 
     if (vehicle) {
       const student = await db.collection("students").findOne({
@@ -24,10 +30,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({
         success: true,
         vehicle: {
-          studentName: student?.studentName,
+          studentName: student?.studentName || "Unknown",
           studentId: vehicle.studentId,
           vehicleNumber: vehicle.vehicleNumber,
-          registrationDate: vehicle.registrationDate.toISOString(),
+          registrationDate: vehicle.registrationDate,
         },
       })
     } else {

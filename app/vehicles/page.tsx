@@ -1,13 +1,18 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useRouter } from "next/navigation"
+import { useToast } from "@/hooks/use-toast"
 
 export default function VehiclesPage() {
+  const router = useRouter()
+  const { toast } = useToast()
+  const [user, setUser] = useState<any>(null)
   const [formData, setFormData] = useState({
     studentId: "",
     vehicleNumber: "",
@@ -21,12 +26,27 @@ export default function VehiclesPage() {
   const [verifyLoading, setVerifyLoading] = useState(false)
   const [verifyError, setVerifyError] = useState<string | null>(null)
 
+  useEffect(() => {
+    const userData = localStorage.getItem('user')
+    if (userData) {
+      const parsedUser = JSON.parse(userData)
+      setUser(parsedUser)
+      setFormData(prev => ({ ...prev, studentId: parsedUser.studentId || "" }))
+    }
+  }, [])
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
   async function handleRegister() {
+    if (!user) {
+      toast({ title: "Login Required", description: "Please login first", variant: "destructive" })
+      router.push('/login')
+      return
+    }
+
     try {
       setLoading(true)
       setError(null)
@@ -45,6 +65,7 @@ export default function VehiclesPage() {
       }
 
       setSuccess("Vehicle registered successfully!")
+      setFormData(prev => ({ ...prev, vehicleNumber: "" }))
     } catch (err: any) {
       console.error("Registration failed:", err)
       setError(err?.message || "Something went wrong")
@@ -84,13 +105,25 @@ export default function VehiclesPage() {
     }
   }
 
+  if (!user) {
+    return (
+      <main className="min-h-screen bg-gradient-to-b from-background to-muted py-12">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold mb-4">Vehicle Management</h1>
+          <p className="text-muted-foreground mb-8">Please login to manage your vehicles</p>
+          <Button onClick={() => router.push('/login')}>Login</Button>
+        </div>
+      </main>
+    )
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-muted py-12">
       <div className="max-w-2xl mx-auto px-4">
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-foreground mb-2">Vehicle Management</h1>
           <p className="text-muted-foreground">
-            Register and verify vehicles.
+            Welcome {user.email}. Register and verify vehicles.
           </p>
         </div>
 
@@ -105,6 +138,7 @@ export default function VehiclesPage() {
                 value={formData.studentId}
                 onChange={handleInputChange}
                 placeholder="Enter student ID"
+                disabled={!!user.studentId}
               />
             </div>
             <div>
@@ -161,6 +195,7 @@ export default function VehiclesPage() {
               ) : (
                 <div>
                   <p className="text-green-500 font-semibold">Vehicle verified</p>
+                  <p><strong>Student Name:</strong> {verificationResult.studentName}</p>
                   <p><strong>Student ID:</strong> {verificationResult.studentId}</p>
                   <p><strong>Vehicle Number:</strong> {verificationResult.vehicleNumber}</p>
                 </div>

@@ -45,7 +45,12 @@ export default function RegisterPage() {
         throw new Error(data.message || "Failed to register")
       }
 
-      setSuccess("Student registered successfully!")
+      setSuccess("Student registered successfully! Use your email and Student ID as password to login.")
+      
+      // Auto redirect to login after 2 seconds
+      setTimeout(() => {
+        router.push('/login')
+      }, 2000)
     } catch (err: any) {
       console.error("Registration failed:", err)
       setError(err?.message || "Something went wrong")
