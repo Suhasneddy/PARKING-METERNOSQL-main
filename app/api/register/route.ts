@@ -22,6 +22,10 @@ export async function POST(req: Request) {
       }
     }
 
+    if (!db) {
+      throw new Error("Failed to connect to database");
+    }
+
     // Check if student already exists
     const existingStudent = await db.collection("students").findOne({ studentId: payload.studentId });
     if (existingStudent) {
