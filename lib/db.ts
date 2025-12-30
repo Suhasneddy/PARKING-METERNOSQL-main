@@ -37,8 +37,8 @@ async function dbConnect() {
 
 // Define the User Schema
 const UserSchema = new mongoose.Schema({
-  userId: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  name: { type: String },
 }, { timestamps: true });
 
 export const User = mongoose.models.User || mongoose.model('User', UserSchema);
