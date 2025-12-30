@@ -18,7 +18,6 @@ export async function connectToDatabase() {
     serverSelectionTimeoutMS: 10000,
     socketTimeoutMS: 45000,
     connectTimeoutMS: 10000,
-    bufferMaxEntries: 0,
     retryWrites: true,
     w: 'majority' as const,
   };
