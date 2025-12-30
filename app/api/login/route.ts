@@ -1,12 +1,16 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import dbConnect from "@/lib/db";
 import { type NextRequest, NextResponse } from "next/server";
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   try {
     const payload = await req.json();
     const { email, password, role } = payload;
 
-    const { db } = await connectToDatabase();
+    await dbConnect();
+    const mongoose = require('mongoose');
+    const db = mongoose.connection.db;
 
     const user = await db.collection("users").findOne({ email });
 
@@ -45,7 +49,9 @@ export async function POST(req: NextRequest) {
         user: { 
           email: user.email, 
           _id: user._id,
-          studentId: user.studentId 
+          role: user.role,
+          studentId: user.studentId,
+          staffId: user.staffId
         } 
       },
       { status: 200 }

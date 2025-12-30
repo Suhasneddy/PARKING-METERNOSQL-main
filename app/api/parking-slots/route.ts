@@ -1,5 +1,6 @@
-import { connectToDatabase } from "@/lib/mongodb";
 import dbConnect, { ParkingSlot, Vehicle } from "@/lib/db";
+
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
@@ -9,7 +10,7 @@ export async function GET() {
     return new Response(
       JSON.stringify({
         success: true,
-        data: slots,
+        slots: slots,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
@@ -29,7 +30,8 @@ export async function POST(req: Request) {
     const { slotId, vehicleNumber, studentId } = await req.json();
     
     await dbConnect();
-    const { db } = await connectToDatabase();
+    const mongoose = require('mongoose');
+    const db = mongoose.connection.db;
     
     // Check if vehicle exists in vehicles collection
     const vehicle = await Vehicle.findOne({
