@@ -1,18 +1,23 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import dbConnect from "@/lib/db";
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
     const studentId = url.searchParams.get('studentId');
     
-    if (!studentId) {
+    if (!studentId || studentId === 'undefined') {
       return new Response(
-        JSON.stringify({ success: false, message: "Student ID required" }),
+        JSON.stringify({ success: false, message: "Valid Student ID required" }),
         { status: 400, headers: { "Content-Type": "application/json" } }
       );
     }
 
-    const { db } = await connectToDatabase();
+    await dbConnect();
+    const mongoose = require('mongoose');
+    const db = mongoose.connection.db;
+    
     const student = await db.collection("students").findOne({ studentId });
     
     if (!student) {

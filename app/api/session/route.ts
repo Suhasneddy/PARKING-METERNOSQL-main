@@ -1,4 +1,6 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import dbConnect from "@/lib/db";
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(req: Request) {
   try {
@@ -12,7 +14,10 @@ export async function GET(req: Request) {
       );
     }
 
-    const { db } = await connectToDatabase();
+    await dbConnect();
+    const mongoose = require('mongoose');
+    const db = mongoose.connection.db;
+    
     const user = await db.collection("users").findOne({ email });
     
     if (!user) {
@@ -28,6 +33,8 @@ export async function GET(req: Request) {
         user: {
           email: user.email,
           role: user.role,
+          studentId: user.studentId,
+          staffId: user.staffId,
           _id: user._id
         }
       }),

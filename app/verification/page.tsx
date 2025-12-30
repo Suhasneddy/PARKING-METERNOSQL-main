@@ -1,50 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useRouter } from "next/navigation"
-
-interface StudentDetails {
-  studentName: string
-  usn: string
-  hostelRoom: string
-  vehicleNumber: string
-  registrationDate: string
-}
 
 export default function VerificationPage() {
-  const router = useRouter()
-  const [isStaff, setIsStaff] = useState(false)
-  const [loading, setLoading] = useState(true)
   const [verifyPlate, setVerifyPlate] = useState("")
   const [verificationResult, setVerificationResult] = useState<any>(null)
   const [verifyLoading, setVerifyLoading] = useState(false)
   const [verifyError, setVerifyError] = useState<string | null>(null)
-
-  useEffect(() => {
-    checkStaffAccess()
-  }, [])
-
-  async function checkStaffAccess() {
-    try {
-      const res = await fetch("/api/session")
-      const data = await res.json()
-      
-      if (!data.success || data.user?.role !== "Staff") {
-        router.push("/login")
-        return
-      }
-      
-      setIsStaff(true)
-    } catch (error) {
-      router.push("/login")
-    } finally {
-      setLoading(false)
-    }
-  }
 
   async function handleVerify() {
     try {
@@ -77,34 +43,11 @@ export default function VerificationPage() {
     }
   }
 
-  if (loading) {
-    return (
-      <main className="min-h-screen bg-gradient-to-b from-background to-muted py-12">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <p>Loading...</p>
-        </div>
-      </main>
-    )
-  }
-
-  if (!isStaff) {
-    return (
-      <main className="min-h-screen bg-gradient-to-b from-background to-muted py-12">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-red-600 mb-4">Access Denied</h1>
-          <p className="text-muted-foreground mb-4">This page is only accessible to staff members.</p>
-          <Button onClick={() => router.push("/login")}>Go to Login</Button>
-        </div>
-      </main>
-    )
-  }
-
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-muted py-12">
       <div className="max-w-2xl mx-auto px-4">
-        {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Vehicle Verification (Staff Only)</h1>
+          <h1 className="text-4xl font-bold text-foreground mb-2">Vehicle Verification (Staff Portal)</h1>
           <p className="text-muted-foreground">
             Enter a vehicle number to verify its registration and view student details.
           </p>
