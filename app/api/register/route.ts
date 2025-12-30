@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/mongodb";
+import dbConnect from "@/lib/db";
 
 export const dynamic = 'force-dynamic';
 
@@ -6,25 +6,11 @@ export async function POST(req: Request) {
   try {
     const payload = await req.json();
 
-    // Add connection timeout and retry logic
-    let db;
-    let retries = 3;
+    // Use mongoose connection instead of native MongoDB client
+    await dbConnect();
     
-    while (retries > 0) {
-      try {
-        const connection = await connectToDatabase();
-        db = connection.db;
-        break;
-      } catch (error) {
-        retries--;
-        if (retries === 0) throw error;
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-    }
-
-    if (!db) {
-      throw new Error("Failed to connect to database");
-    }
+    const mongoose = require('mongoose');
+    const db = mongoose.connection.db;
 
     // Check if student already exists
     const existingStudent = await db.collection("students").findOne({ studentId: payload.studentId });
