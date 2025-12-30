@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/db';
-import Vehicle from '@/models/Vehicle';
+import dbConnect, { Vehicle } from '@/lib/db';
 
 export async function GET() {
   try {
@@ -14,8 +13,8 @@ export async function GET() {
 
     await Vehicle.create({
       vehicleNumber: 'ABC-1234',
-      ownerName: 'John Doe',
-      model: 'Tesla Model 3'
+      numberPlate: 'ABC-1234',
+      studentId: '12345'
     });
 
     return NextResponse.json({ success: true, message: 'Created vehicle: ABC-1234' });

@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 
@@ -28,7 +27,6 @@ export default function ParkingLayoutPage() {
   const [selectedSlot, setSelectedSlot] = useState<ParkingSlot | null>(null);
   const [vehicleNumber, setVehicleNumber] = useState('');
   const [showBooking, setShowBooking] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
   const [user, setUser] = useState<UserData | null>(null);
   const [studentData, setStudentData] = useState({ studentId: '', studentName: '' });
   const { toast } = useToast();
@@ -76,7 +74,12 @@ export default function ParkingLayoutPage() {
 
   const handleBookNow = () => {
     if (!user) {
-      setShowLogin(true);
+      toast({ 
+        title: "Login Required", 
+        description: "Please login to book a parking slot",
+        variant: "destructive"
+      });
+      router.push('/login');
       return;
     }
     if (selectedSlot?.status === 'available') {
@@ -105,6 +108,7 @@ export default function ParkingLayoutPage() {
         fetchSlots();
         setShowBooking(false);
         setVehicleNumber('');
+        setStudentData({ studentId: '', studentName: '' });
       } else {
         toast({ 
           title: "Error", 
@@ -279,26 +283,6 @@ export default function ParkingLayoutPage() {
             </Card>
           </div>
         </div>
-
-        {/* Login Dialog */}
-        <Dialog open={showLogin} onOpenChange={setShowLogin}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Login Required</DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4">
-              <p>You need to login to book a parking slot.</p>
-              <div className="flex gap-2">
-                <Button onClick={() => router.push('/login')} className="flex-1">
-                  Go to Login
-                </Button>
-                <Button onClick={() => router.push('/register')} variant="outline" className="flex-1">
-                  Register
-                </Button>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
       </div>
     </div>
   );
